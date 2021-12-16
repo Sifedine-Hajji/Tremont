@@ -1,0 +1,36 @@
+nav {
+    @include flex($just-cont:space-between);
+    padding: 56px 56px;
+    position: fixed;
+    width: 100%;
+    transition:.3s all ease-in-out;
+    z-index: 2;
+    
+    .nav-logo {
+        a {
+            font-size: 20px;
+            letter-spacing: 3px;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        a {
+            padding: 0 5px;
+            font-size: 15px;
+            color: white;
+        }
+        .active, a:hover {
+            color: $navHoverColor;
+        }
+        .page-links {
+            @include mobile {
+                display: none;
+            }
+        }
+
+    }
+}
